@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj's Portfolio</title>
+    <link rel="stylesheet" href="royal.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: linear-gradient(to right, #ff7f50, #ff4500);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .navbar h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #222;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            padding: 0.8rem 2rem;
+            background-color: #ff7f50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 127, 80, 0.4);
+        }
+        .btn:hover {
+            background-color: #ff4500;
+            box-shadow: 0 10px 25px rgba(255, 69, 0, 0.5);
+        }
+
+        /* About Section */
+        #about {
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            padding: 4rem 10%;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(to right, #c9ffbf, #ffafbd);
+            padding: 4rem 10%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #contact-form input, #contact-form textarea {
+            padding: 1rem;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #contact-form button {
+            background-color: #ff7f50;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #contact-form button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar ul {
+                margin-top: 1rem;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>Suraj Vishwakarma</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2> Hello welcome to my portfolio profile</h2>
+            <p>Web Developer | Problem Solver | Innovator</p>
+            <a href="contact.html" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Suraj Vishwakarma | Web Developer
+    </footer>
+
+</body>
+</html>

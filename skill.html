@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Suraj Vishwakarma</title>
+    <link rel="stylesheet" href="royal.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: linear-gradient(135deg, #ff7f50, #ff4500);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skill Details */
+        .skill-details {
+            margin-top: 1.5rem;
+            padding: 20px;
+            background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+            color: white;
+            border-radius: 10px;
+            display: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-details.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>🚀 My Skills</h2>
+        <p>Click on any skill to know more about it!</p>
+
+        <!-- Skills List -->
+        <ul class="skills-list">
+            <li onclick="showSkill('html')">HTML5</li>
+            <li onclick="showSkill('css')">CSS3</li>
+            <li onclick="showSkill('javascript')">JavaScript</li>
+            <li onclick="showSkill('react')">ReactJS</li>
+            <li onclick="showSkill('node')">Node.js</li>
+            <li onclick="showSkill('python')">Python</li>
+            <li onclick="showSkill('bootstrap')">Bootstrap</li>
+            <li onclick="showSkill('sql')">SQL</li>
+        </ul>
+
+        <!-- Skill Details -->
+        <div id="html" class="skill-details">
+            <h3>📄 HTML5</h3>
+            <p>HTML is the standard markup language used to create web pages. It structures the content on the web.</p>
+        </div>
+
+        <div id="css" class="skill-details">
+            <h3>🎨 CSS3</h3>
+            <p>CSS is used to design and style the web pages, making them look more appealing.</p>
+        </div>
+
+        <div id="javascript" class="skill-details">
+            <h3>⚡ JavaScript</h3>
+            <p>JavaScript makes the web interactive and dynamic, adding functionality and features.</p>
+        </div>
+
+        <div id="react" class="skill-details">
+            <h3>⚛️ ReactJS</h3>
+            <p>React is a JavaScript library used for building dynamic and interactive user interfaces.</p>
+        </div>
+
+        <div id="node" class="skill-details">
+            <h3>🌐 Node.js</h3>
+            <p>Node.js allows JavaScript to run on the server, making it possible to build scalable web applications.</p>
+        </div>
+
+        <div id="python" class="skill-details">
+            <h3>🐍 Python</h3>
+            <p>Python is a versatile, high-level programming language widely used for web development and AI.</p>
+        </div>
+
+        <div id="bootstrap" class="skill-details">
+            <h3>📚 Bootstrap</h3>
+            <p>Bootstrap is a CSS framework that helps to design responsive and mobile-friendly websites.</p>
+        </div>
+
+        <div id="sql" class="skill-details">
+            <h3>🗄️ SQL</h3>
+            <p>SQL is used to manage and manipulate databases, ensuring data storage and retrieval.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Suraj Vishwakarma | Web Developer ❤️
+    </footer>
+
+    <!-- JavaScript for Skill Description -->
+    <script>
+        function showSkill(skill) {
+            // Hide all skill details first
+            const skillDetails = document.querySelectorAll('.skill-details');
+            skillDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+
+            // Show the selected skill detail
+            document.getElementById(skill).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
